@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8505A16C23D2F8790067C67B /* PeanutBatterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8505A16B23D2F8790067C67B /* PeanutBatterCell.swift */; };
+		8505A17223D454DB0067C67B /* PeanutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8505A17123D454DB0067C67B /* PeanutViewController.swift */; };
 		8538AAED23D2E48D00E136ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8538AAEC23D2E48D00E136ED /* AppDelegate.swift */; };
 		8538AAEF23D2E48D00E136ED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8538AAEE23D2E48D00E136ED /* SceneDelegate.swift */; };
 		8538AAF123D2E48D00E136ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8538AAF023D2E48D00E136ED /* ViewController.swift */; };
 		8538AAF423D2E48D00E136ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8538AAF223D2E48D00E136ED /* Main.storyboard */; };
 		8538AAF623D2E48E00E136ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8538AAF523D2E48E00E136ED /* Assets.xcassets */; };
 		8538AAF923D2E48E00E136ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8538AAF723D2E48E00E136ED /* LaunchScreen.storyboard */; };
+		8538AB0123D2E5EB00E136ED /* PeanutButter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8538AB0023D2E5EB00E136ED /* PeanutButter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8505A16B23D2F8790067C67B /* PeanutBatterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeanutBatterCell.swift; sourceTree = "<group>"; };
+		8505A17123D454DB0067C67B /* PeanutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeanutViewController.swift; sourceTree = "<group>"; };
 		8538AAE923D2E48D00E136ED /* PeanutButter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeanutButter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8538AAEC23D2E48D00E136ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8538AAEE23D2E48D00E136ED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +29,7 @@
 		8538AAF523D2E48E00E136ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8538AAF823D2E48E00E136ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8538AAFA23D2E48E00E136ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8538AB0023D2E5EB00E136ED /* PeanutButter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeanutButter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +65,9 @@
 				8538AAEC23D2E48D00E136ED /* AppDelegate.swift */,
 				8538AAEE23D2E48D00E136ED /* SceneDelegate.swift */,
 				8538AAF023D2E48D00E136ED /* ViewController.swift */,
+				8505A17123D454DB0067C67B /* PeanutViewController.swift */,
+				8538AB0023D2E5EB00E136ED /* PeanutButter.swift */,
+				8505A16B23D2F8790067C67B /* PeanutBatterCell.swift */,
 				8538AAF223D2E48D00E136ED /* Main.storyboard */,
 				8538AAF523D2E48E00E136ED /* Assets.xcassets */,
 				8538AAF723D2E48E00E136ED /* LaunchScreen.storyboard */,
@@ -138,9 +147,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8538AB0123D2E5EB00E136ED /* PeanutButter.swift in Sources */,
 				8538AAF123D2E48D00E136ED /* ViewController.swift in Sources */,
 				8538AAED23D2E48D00E136ED /* AppDelegate.swift in Sources */,
 				8538AAEF23D2E48D00E136ED /* SceneDelegate.swift in Sources */,
+				8505A16C23D2F8790067C67B /* PeanutBatterCell.swift in Sources */,
+				8505A17223D454DB0067C67B /* PeanutViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
