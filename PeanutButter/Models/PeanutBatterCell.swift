@@ -17,4 +17,7 @@ class PeanutButterCell: UITableViewCell {
     }
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var tasteLabel: UILabel!
+    @IBOutlet weak var likeButton: UIButton!
+    
+    //var likeAction: ((UITableViewCell) -> Void)?
 }

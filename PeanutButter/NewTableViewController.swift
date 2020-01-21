@@ -12,16 +12,20 @@ class NewTableViewController: UITableViewController {
     
     var peanutButter: PeanutButter!
     var imageIsChanged = false
+    var like = false
+    let dislikeImage = UIImage(systemName: "heart")
+    let likeImage = UIImage(systemName: "heart.fill")
 
+    @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var tasteTextField: UITextField!
     @IBOutlet weak var textView: UITextView!
-    @IBOutlet weak var saveButton: UIBarButtonItem!
+    @IBOutlet weak var saveButton: UIBarButtonItem!    
+    @IBOutlet weak var ratingStack: RatingControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.tableFooterView = UIView(frame: CGRect(x: 0,
                                                          y: 0,
                                                          width: tableView.frame.size.width,
@@ -29,11 +33,47 @@ class NewTableViewController: UITableViewController {
         saveButton.isEnabled = false
         nameTextField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         setupEditScreen()
+        like = peanutButter.like
+    }
+    
+    @IBAction func chooseImage(_ sender: Any) {
+        let cameraIcon = #imageLiteral(resourceName: "camera")
+        let photoIcon = #imageLiteral(resourceName: "photo")
+        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        let camera = UIAlertAction(title: "Camera", style: .default) { _ in
+            self.chooseImagePicker(source: .camera)
+        }
+        camera.setValue(cameraIcon, forKey: "image")
+        camera.setValue(CATextLayerAlignmentMode.left, forKey: "titleTextAlignment")
+        
+        let photo = UIAlertAction(title: "Photo", style: .default) { _ in
+            self.chooseImagePicker(source: .photoLibrary)
+        }
+        photo.setValue(photoIcon, forKey: "image")
+        photo.setValue(CATextLayerAlignmentMode.left, forKey: "titleTextAlignment")
+        
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel)
+        actionSheet.addAction(camera)
+        actionSheet.addAction(photo)
+        actionSheet.addAction(cancel)
+        present(actionSheet, animated: true)
+    }
+    
+    @IBAction func likeButtonPressed(_ sender: Any) {
+        like = !like
+        if like == true {
+            likeButton.setImage(likeImage, for: .normal)
+        }
+        else {
+            likeButton.setImage(dislikeImage, for: .normal)
+        }
     }
     
     //MARK: - Table View Delegate
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         if indexPath.row == 1 {
             let cameraIcon = #imageLiteral(resourceName: "camera")
             let photoIcon = #imageLiteral(resourceName: "photo")
@@ -72,9 +112,8 @@ class NewTableViewController: UITableViewController {
                                      taste: tasteTextField.text,
                                      productInfo: textView.text,
                                      imageData: imageData,
-                                     rating: 0.0,
-                                     like: false)
-        
+                                     rating: Double(ratingStack.rating),
+                                     like: like)
         if peanutButter != nil{
             try! realm.write {
                 peanutButter?.name = newPeanut.name
@@ -103,8 +142,14 @@ class NewTableViewController: UITableViewController {
             nameTextField.text = peanutButter?.name
             tasteTextField.text = peanutButter?.taste
             textView.text = peanutButter?.productInfo
-            // rating
+            ratingStack.rating = Int(peanutButter.rating)
             // like
+            if peanutButter.like == true {
+                likeButton.setImage(likeImage, for: .normal)
+            }
+            else {
+                likeButton.setImage(dislikeImage, for: .normal)
+            }
         }
     }
     

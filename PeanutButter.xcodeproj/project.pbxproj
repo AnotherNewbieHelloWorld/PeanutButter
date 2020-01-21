@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		5175BAA57979F7245AAFCE9D /* Pods_PeanutButter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC8FDBF7649D28EDCEF41CFF /* Pods_PeanutButter.framework */; };
 		8505A16C23D2F8790067C67B /* PeanutBatterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8505A16B23D2F8790067C67B /* PeanutBatterCell.swift */; };
-		8505A17223D454DB0067C67B /* PeanutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8505A17123D454DB0067C67B /* PeanutViewController.swift */; };
 		8538AAED23D2E48D00E136ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8538AAEC23D2E48D00E136ED /* AppDelegate.swift */; };
 		8538AAEF23D2E48D00E136ED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8538AAEE23D2E48D00E136ED /* SceneDelegate.swift */; };
 		8538AAF123D2E48D00E136ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8538AAF023D2E48D00E136ED /* ViewController.swift */; };
@@ -17,6 +16,7 @@
 		8538AAF623D2E48E00E136ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8538AAF523D2E48E00E136ED /* Assets.xcassets */; };
 		8538AAF923D2E48E00E136ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8538AAF723D2E48E00E136ED /* LaunchScreen.storyboard */; };
 		8538AB0123D2E5EB00E136ED /* PeanutButter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8538AB0023D2E5EB00E136ED /* PeanutButter.swift */; };
+		854180E223D6C94800ECF14F /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854180E123D6C94800ECF14F /* RatingControl.swift */; };
 		85E3998223D591D30095856F /* PeanutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E3998123D591D30095856F /* PeanutModel.swift */; };
 		85E3998423D594990095856F /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E3998323D594990095856F /* StoreManager.swift */; };
 		85E3998C23D5C3240095856F /* NewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E3998B23D5C3240095856F /* NewTableViewController.swift */; };
@@ -24,7 +24,6 @@
 
 /* Begin PBXFileReference section */
 		8505A16B23D2F8790067C67B /* PeanutBatterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeanutBatterCell.swift; sourceTree = "<group>"; };
-		8505A17123D454DB0067C67B /* PeanutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeanutViewController.swift; sourceTree = "<group>"; };
 		8538AAE923D2E48D00E136ED /* PeanutButter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeanutButter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8538AAEC23D2E48D00E136ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8538AAEE23D2E48D00E136ED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +33,7 @@
 		8538AAF823D2E48E00E136ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8538AAFA23D2E48E00E136ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8538AB0023D2E5EB00E136ED /* PeanutButter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeanutButter.swift; sourceTree = "<group>"; };
+		854180E123D6C94800ECF14F /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		85E3998123D591D30095856F /* PeanutModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeanutModel.swift; sourceTree = "<group>"; };
 		85E3998323D594990095856F /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
 		85E3998B23D5C3240095856F /* NewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewTableViewController.swift; path = PeanutButter/NewTableViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -94,7 +94,6 @@
 			children = (
 				8538AAEC23D2E48D00E136ED /* AppDelegate.swift */,
 				8538AAEE23D2E48D00E136ED /* SceneDelegate.swift */,
-				8538AAF023D2E48D00E136ED /* ViewController.swift */,
 				85E3998523D5B18A0095856F /* ViewControllers */,
 				85E3998823D5B1E00095856F /* Models */,
 				8538AAF223D2E48D00E136ED /* Main.storyboard */,
@@ -102,7 +101,6 @@
 				8538AAF723D2E48E00E136ED /* LaunchScreen.storyboard */,
 				8538AAFA23D2E48E00E136ED /* Info.plist */,
 				8538AB0023D2E5EB00E136ED /* PeanutButter.swift */,
-				8505A17123D454DB0067C67B /* PeanutViewController.swift */,
 			);
 			path = PeanutButter;
 			sourceTree = "<group>";
@@ -110,6 +108,7 @@
 		85E3998523D5B18A0095856F /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				8538AAF023D2E48D00E136ED /* ViewController.swift */,
 				85E3998B23D5C3240095856F /* NewTableViewController.swift */,
 			);
 			path = ViewControllers;
@@ -121,6 +120,7 @@
 				85E3998123D591D30095856F /* PeanutModel.swift */,
 				85E3998323D594990095856F /* StoreManager.swift */,
 				8505A16B23D2F8790067C67B /* PeanutBatterCell.swift */,
+				854180E123D6C94800ECF14F /* RatingControl.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -244,10 +244,10 @@
 				8538AAF123D2E48D00E136ED /* ViewController.swift in Sources */,
 				85E3998C23D5C3240095856F /* NewTableViewController.swift in Sources */,
 				8538AAED23D2E48D00E136ED /* AppDelegate.swift in Sources */,
+				854180E223D6C94800ECF14F /* RatingControl.swift in Sources */,
 				8538AAEF23D2E48D00E136ED /* SceneDelegate.swift in Sources */,
 				8505A16C23D2F8790067C67B /* PeanutBatterCell.swift in Sources */,
 				85E3998423D594990095856F /* StoreManager.swift in Sources */,
-				8505A17223D454DB0067C67B /* PeanutViewController.swift in Sources */,
 				85E3998223D591D30095856F /* PeanutModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
