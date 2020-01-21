@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5175BAA57979F7245AAFCE9D /* Pods_PeanutButter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC8FDBF7649D28EDCEF41CFF /* Pods_PeanutButter.framework */; };
 		8505A16C23D2F8790067C67B /* PeanutBatterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8505A16B23D2F8790067C67B /* PeanutBatterCell.swift */; };
 		8505A17223D454DB0067C67B /* PeanutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8505A17123D454DB0067C67B /* PeanutViewController.swift */; };
 		8538AAED23D2E48D00E136ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8538AAEC23D2E48D00E136ED /* AppDelegate.swift */; };
@@ -16,6 +17,9 @@
 		8538AAF623D2E48E00E136ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8538AAF523D2E48E00E136ED /* Assets.xcassets */; };
 		8538AAF923D2E48E00E136ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8538AAF723D2E48E00E136ED /* LaunchScreen.storyboard */; };
 		8538AB0123D2E5EB00E136ED /* PeanutButter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8538AB0023D2E5EB00E136ED /* PeanutButter.swift */; };
+		85E3998223D591D30095856F /* PeanutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E3998123D591D30095856F /* PeanutModel.swift */; };
+		85E3998423D594990095856F /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E3998323D594990095856F /* StoreManager.swift */; };
+		85E3998C23D5C3240095856F /* NewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E3998B23D5C3240095856F /* NewTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,12 @@
 		8538AAF823D2E48E00E136ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8538AAFA23D2E48E00E136ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8538AB0023D2E5EB00E136ED /* PeanutButter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeanutButter.swift; sourceTree = "<group>"; };
+		85E3998123D591D30095856F /* PeanutModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeanutModel.swift; sourceTree = "<group>"; };
+		85E3998323D594990095856F /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
+		85E3998B23D5C3240095856F /* NewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewTableViewController.swift; path = PeanutButter/NewTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		89FF3D7224835858FAADCF16 /* Pods-PeanutButter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeanutButter.debug.xcconfig"; path = "Target Support Files/Pods-PeanutButter/Pods-PeanutButter.debug.xcconfig"; sourceTree = "<group>"; };
+		D60E9DB2F7BE90376875ECD6 /* Pods-PeanutButter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeanutButter.release.xcconfig"; path = "Target Support Files/Pods-PeanutButter/Pods-PeanutButter.release.xcconfig"; sourceTree = "<group>"; };
+		DC8FDBF7649D28EDCEF41CFF /* Pods_PeanutButter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PeanutButter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +47,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5175BAA57979F7245AAFCE9D /* Pods_PeanutButter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13F7A1C3B20797762C864A6E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				89FF3D7224835858FAADCF16 /* Pods-PeanutButter.debug.xcconfig */,
+				D60E9DB2F7BE90376875ECD6 /* Pods-PeanutButter.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		68F7E9188602809EF1DFED15 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DC8FDBF7649D28EDCEF41CFF /* Pods_PeanutButter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8538AAE023D2E48D00E136ED = {
 			isa = PBXGroup;
 			children = (
 				8538AAEB23D2E48D00E136ED /* PeanutButter */,
 				8538AAEA23D2E48D00E136ED /* Products */,
+				13F7A1C3B20797762C864A6E /* Pods */,
+				68F7E9188602809EF1DFED15 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,15 +95,34 @@
 				8538AAEC23D2E48D00E136ED /* AppDelegate.swift */,
 				8538AAEE23D2E48D00E136ED /* SceneDelegate.swift */,
 				8538AAF023D2E48D00E136ED /* ViewController.swift */,
-				8505A17123D454DB0067C67B /* PeanutViewController.swift */,
-				8538AB0023D2E5EB00E136ED /* PeanutButter.swift */,
-				8505A16B23D2F8790067C67B /* PeanutBatterCell.swift */,
+				85E3998523D5B18A0095856F /* ViewControllers */,
+				85E3998823D5B1E00095856F /* Models */,
 				8538AAF223D2E48D00E136ED /* Main.storyboard */,
 				8538AAF523D2E48E00E136ED /* Assets.xcassets */,
 				8538AAF723D2E48E00E136ED /* LaunchScreen.storyboard */,
 				8538AAFA23D2E48E00E136ED /* Info.plist */,
+				8538AB0023D2E5EB00E136ED /* PeanutButter.swift */,
+				8505A17123D454DB0067C67B /* PeanutViewController.swift */,
 			);
 			path = PeanutButter;
+			sourceTree = "<group>";
+		};
+		85E3998523D5B18A0095856F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				85E3998B23D5C3240095856F /* NewTableViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		85E3998823D5B1E00095856F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				85E3998123D591D30095856F /* PeanutModel.swift */,
+				85E3998323D594990095856F /* StoreManager.swift */,
+				8505A16B23D2F8790067C67B /* PeanutBatterCell.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,9 +132,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8538AAFD23D2E48E00E136ED /* Build configuration list for PBXNativeTarget "PeanutButter" */;
 			buildPhases = (
+				C04640C2B8FFE57F492D2AC3 /* [CP] Check Pods Manifest.lock */,
 				8538AAE523D2E48D00E136ED /* Sources */,
 				8538AAE623D2E48D00E136ED /* Frameworks */,
 				8538AAE723D2E48D00E136ED /* Resources */,
+				B3C249CCBF5BDD26AB0AF9EF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -142,6 +193,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B3C249CCBF5BDD26AB0AF9EF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PeanutButter/Pods-PeanutButter-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PeanutButter/Pods-PeanutButter-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PeanutButter/Pods-PeanutButter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C04640C2B8FFE57F492D2AC3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PeanutButter-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8538AAE523D2E48D00E136ED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -149,10 +242,13 @@
 			files = (
 				8538AB0123D2E5EB00E136ED /* PeanutButter.swift in Sources */,
 				8538AAF123D2E48D00E136ED /* ViewController.swift in Sources */,
+				85E3998C23D5C3240095856F /* NewTableViewController.swift in Sources */,
 				8538AAED23D2E48D00E136ED /* AppDelegate.swift in Sources */,
 				8538AAEF23D2E48D00E136ED /* SceneDelegate.swift in Sources */,
 				8505A16C23D2F8790067C67B /* PeanutBatterCell.swift in Sources */,
+				85E3998423D594990095856F /* StoreManager.swift in Sources */,
 				8505A17223D454DB0067C67B /* PeanutViewController.swift in Sources */,
+				85E3998223D591D30095856F /* PeanutModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +390,7 @@
 		};
 		8538AAFE23D2E48E00E136ED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89FF3D7224835858FAADCF16 /* Pods-PeanutButter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -311,6 +408,7 @@
 		};
 		8538AAFF23D2E48E00E136ED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D60E9DB2F7BE90376875ECD6 /* Pods-PeanutButter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -7,20 +7,22 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ViewController: UITableViewController {
-    var peanuts: [PeanutButter] = []
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        let _ = PeanutManager.main.create(newName: "Sporty Peanut", newTaste: "unsweeted, natural", newImageName: "sportyPeanut", newDescription: "The Best Peanut Butter in India")
-        //PeanutManager.main.delete()
-        reload()
+    private var peanuts: Results<PeanutButter>! = nil
+    var test: PeanutButter!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        //let image = #imageLiteral(resourceName: "bird")
+        //test = PeanutButter(name: "Birds", taste: "ask a bird", productInfo: "Special buy peanut butter for garden birds?", imageData: image.pngData(), rating: 1.0, like: false)
+        //StoreManager.saveObject(test)
+        peanuts = realm.objects(PeanutButter.self)
     }
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
+    // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return peanuts.count
@@ -28,24 +30,47 @@ class ViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PeanutButter", for: indexPath) as! PeanutButterCell
-        cell.nameLabel.text = peanuts[indexPath.row].name
-        cell.tasteLabel.text = peanuts[indexPath.row].taste
+        let peanut = peanuts[indexPath.row]
+        
+        cell.nameLabel.text = peanut.name
+        cell.tasteLabel.text = peanut.taste
+        cell.jarImage.image = UIImage(data: peanut.imageData!)
+        // rating
+        // like
+        
         return cell
     }
     
-    func reload() {
-        peanuts = PeanutManager.main.getAllNotes()
-        self.tableView.reloadData()
+    // MARK: - Table View Delegate
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let peanut = peanuts[indexPath.row]
+        let deleteAction = UITableViewRowAction(style: .default, title: "Delete") { (_, _) in
+            StoreManager.deleteObject(peanut)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+          }
+          return [deleteAction]
+      }
+    
+    // MARK: - Navigation
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ShowDetails"{
-            // we want to cast that DestinationViewController to an instance of our NoteViewController
-            if let destination = segue.destination as? PeanutViewController {
-                destination.peanutButter = peanuts[tableView.indexPathForSelectedRow!.row]
-            }
+        if segue.identifier == "showDetail"{
+            guard let indexPath = tableView.indexPathForSelectedRow else { return }
+            let peanut = peanuts[indexPath.row]
+            let newPlaceVC = segue.destination as! NewTableViewController
+            newPlaceVC.peanutButter = peanut
         }
     }
-
+    
+    @IBAction func unwindSegue(_ segue: UIStoryboardSegue) {
+        guard let newPlaceVC = segue.source as? NewTableViewController else { return }
+        newPlaceVC.savePeanutButter()
+        tableView.reloadData()
+    }
 }
 

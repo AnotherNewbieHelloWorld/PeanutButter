@@ -1,0 +1,6 @@
+framework module Pods_PeanutButter {
+  umbrella header "Pods-PeanutButter-umbrella.h"
+
+  export *
+  module * { export * }
+}

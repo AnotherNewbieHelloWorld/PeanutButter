@@ -5,7 +5,7 @@
 //  Created by Apple User on 18.01.2020.
 //  Copyright © 2020 Alena Khoroshilova. All rights reserved.
 //
-
+/*
 import Foundation
 import SQLite3
 
@@ -104,8 +104,8 @@ class PeanutManager {
     func delete() {
         connect()
         var statement: OpaquePointer!
-        // DROP TABLE
-        if sqlite3_prepare_v2(database, "DELETE FROM peanuts", -1, &statement, nil) != SQLITE_OK{
+        // DROP TABLE, DELETE FROM
+        if sqlite3_prepare_v2(database, "DROP TABLE peanuts", -1, &statement, nil) != SQLITE_OK{
             print("Error creating delete statement")
             return
         }
@@ -118,3 +118,4 @@ class PeanutManager {
         sqlite3_finalize(statement)
     }
 }
+*/
