@@ -15,7 +15,6 @@ class ViewController: UITableViewController {
     var test: PeanutButter!
     let dislikeImage = UIImage(systemName: "heart")
     let likeImage = UIImage(systemName: "heart.fill")
-    var like = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +37,7 @@ class ViewController: UITableViewController {
         cell.nameLabel.text = peanut.name
         cell.tasteLabel.text = peanut.taste
         cell.jarImage.image = UIImage(data: peanut.imageData!)
-        // rating
+        cell.cosmosView.rating = peanut.rating
         if peanut.like {
             cell.likeButton.setImage(likeImage, for: .normal)
         }

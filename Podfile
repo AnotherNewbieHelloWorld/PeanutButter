@@ -7,4 +7,5 @@ target 'PeanutButter' do
 
   # Pods for PeanutButter
   pod 'RealmSwift'
+  pod 'Cosmos', '~> 20.0'
 end

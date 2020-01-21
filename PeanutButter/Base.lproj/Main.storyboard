@@ -51,55 +51,50 @@
                                             <rect key="frame" x="49" y="86" width="30" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </button>
-                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="4VT-lc-uCr">
-                                            <rect key="frame" x="53" y="95" width="126" height="22"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v8u-11-4oT">
-                                                    <rect key="frame" x="0.0" y="0.0" width="22" height="22"/>
-                                                    <color key="tintColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <state key="normal" image="star" catalog="system"/>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLK-sR-8bs">
-                                                    <rect key="frame" x="26" y="0.0" width="22" height="22"/>
-                                                    <color key="tintColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <state key="normal" image="star" catalog="system"/>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XgH-LD-9w3">
-                                                    <rect key="frame" x="52" y="0.0" width="22" height="22"/>
-                                                    <color key="tintColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <state key="normal" image="star" catalog="system"/>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sMo-nN-Rvv">
-                                                    <rect key="frame" x="78" y="0.0" width="22" height="22"/>
-                                                    <color key="tintColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <state key="normal" image="star" catalog="system"/>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LJ6-aE-e9E">
-                                                    <rect key="frame" x="104" y="0.0" width="22" height="22"/>
-                                                    <color key="tintColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <state key="normal" image="star" catalog="system"/>
-                                                </button>
-                                            </subviews>
-                                        </stackView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nfW-Nl-C9h" customClass="CosmosView" customModule="Cosmos">
+                                            <rect key="frame" x="53" y="95" width="120" height="32"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                    <integer key="value" value="20"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="emptBorder">
+                                                    <color key="value" red="1" green="0.75060351609999998" blue="0.34103904530000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="filledBorder">
+                                                    <color key="value" red="1" green="0.75060351609999998" blue="0.34103904530000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="filledColor">
+                                                    <color key="value" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="emptyBorderColor">
+                                                    <color key="value" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="filledBorderColor">
+                                                    <color key="value" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="uQM-pH-hB6" firstAttribute="top" secondItem="2sD-h4-vwd" secondAttribute="topMargin" constant="15" id="5IM-zI-LQg"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="ejs-Hx-Acv" secondAttribute="trailing" id="60z-sa-lQK"/>
                                         <constraint firstItem="ZIZ-fG-dfF" firstAttribute="top" secondItem="uQM-pH-hB6" secondAttribute="bottom" constant="5" id="7Bd-WG-JfM"/>
-                                        <constraint firstItem="4VT-lc-uCr" firstAttribute="leading" secondItem="2sD-h4-vwd" secondAttribute="leadingMargin" constant="33" id="FAf-rF-gca"/>
                                         <constraint firstItem="s5C-4z-GUb" firstAttribute="centerY" secondItem="2sD-h4-vwd" secondAttribute="centerY" id="FdQ-Eo-Ifi"/>
                                         <constraint firstItem="ejs-Hx-Acv" firstAttribute="leading" secondItem="uQM-pH-hB6" secondAttribute="trailing" constant="10" id="Hcm-3I-Z9p"/>
                                         <constraint firstItem="ejs-Hx-Acv" firstAttribute="bottom" secondItem="2sD-h4-vwd" secondAttribute="bottomMargin" id="LbT-Qx-ouR"/>
                                         <constraint firstItem="ZIZ-fG-dfF" firstAttribute="leading" secondItem="2sD-h4-vwd" secondAttribute="leadingMargin" constant="33" id="R7k-l5-mQs"/>
                                         <constraint firstItem="uQM-pH-hB6" firstAttribute="leading" secondItem="2sD-h4-vwd" secondAttribute="leadingMargin" constant="33" id="Zkr-k7-ock"/>
-                                        <constraint firstItem="ZIZ-fG-dfF" firstAttribute="top" secondItem="uQM-pH-hB6" secondAttribute="bottom" constant="5" id="cRc-hO-Kd0"/>
+                                        <constraint firstItem="nfW-Nl-C9h" firstAttribute="bottom" secondItem="2sD-h4-vwd" secondAttribute="bottomMargin" id="atY-Uf-H9e"/>
+                                        <constraint firstItem="nfW-Nl-C9h" firstAttribute="top" secondItem="ZIZ-fG-dfF" secondAttribute="bottom" constant="5" id="bAo-dn-QX8"/>
                                         <constraint firstItem="s5C-4z-GUb" firstAttribute="leading" secondItem="2sD-h4-vwd" secondAttribute="leading" constant="10" id="n7T-Px-U89"/>
                                         <constraint firstItem="ejs-Hx-Acv" firstAttribute="leading" secondItem="ZIZ-fG-dfF" secondAttribute="trailing" constant="10" id="ny8-51-8Ds"/>
-                                        <constraint firstItem="4VT-lc-uCr" firstAttribute="top" secondItem="ZIZ-fG-dfF" secondAttribute="bottom" constant="5" id="wBW-4O-79a"/>
+                                        <constraint firstItem="nfW-Nl-C9h" firstAttribute="leading" secondItem="2sD-h4-vwd" secondAttribute="leadingMargin" constant="33" id="or0-Ir-raY"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                 <connections>
+                                    <outlet property="cosmosView" destination="nfW-Nl-C9h" id="h7j-gf-WRF"/>
                                     <outlet property="jarImage" destination="ejs-Hx-Acv" id="Rds-a5-QLk"/>
                                     <outlet property="likeButton" destination="s5C-4z-GUb" id="Y96-gp-gkD"/>
                                     <outlet property="nameLabel" destination="ZIZ-fG-dfF" id="cbD-AG-vWI"/>
@@ -124,7 +119,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9mn-p2-Afp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1107.2463768115942" y="122.54464285714285"/>
+            <point key="canvasLocation" x="932" y="123"/>
         </scene>
         <!--New Peanut Butter-->
         <scene sceneID="Rwq-Lj-Bwl">
@@ -243,7 +238,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="50" id="jBx-pR-1Tv">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="50" id="jBx-pR-1Tv">
                                         <rect key="frame" x="0.0" y="474" width="414" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jBx-pR-1Tv" id="4Ur-XW-YQ7">
@@ -377,7 +372,6 @@
         <image name="crunchTime" width="1100" height="1100"/>
         <image name="heart" catalog="system" width="64" height="54"/>
         <image name="photo.fill" catalog="system" width="64" height="46"/>
-        <image name="star" catalog="system" width="64" height="58"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="DPt-Hb-Ymu"/>

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Cosmos
 
 class PeanutButterCell: UITableViewCell {
     @IBOutlet weak var jarImage: UIImageView! {
@@ -18,6 +19,9 @@ class PeanutButterCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var tasteLabel: UILabel!
     @IBOutlet weak var likeButton: UIButton!
-    
-    //var likeAction: ((UITableViewCell) -> Void)?
+    @IBOutlet weak var cosmosView: CosmosView! {
+        didSet {
+            cosmosView.settings.updateOnTouch = false
+        }
+    }
 }

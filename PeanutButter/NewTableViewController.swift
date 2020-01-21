@@ -33,7 +33,9 @@ class NewTableViewController: UITableViewController {
         saveButton.isEnabled = false
         nameTextField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         setupEditScreen()
-        like = peanutButter.like
+        if peanutButter != nil {
+            like = peanutButter.like
+        }
     }
     
     @IBAction func chooseImage(_ sender: Any) {
